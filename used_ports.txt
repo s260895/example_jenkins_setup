@@ -1,4 +1,2 @@
 exposed host ports 
 8080:8080 jenkins
-50000:50000 jenkins-cluster
-4444:22 jenkins_agent ssh

@@ -1,0 +1,12 @@
+version: '3'
+services:
+  jenkins-agent:
+    image: jenkins/ssh-agent
+    environment:
+       - JENKINS_AGENT_SSH_PUBKEY=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCzl/DXbrHRGyDsyJegF7iPTksb0+IFzT+OWQavzh/6vmGJC1IJD+YrRsMFttHo6hJpPHTri0iT6OjAE/CshmNb8pYyduPOEuXnDZnJm1lFTtmSOfIL1XRLOsKyCclTRpRbXZ1IZjicqOfyrylZKgD9LQDJ+qK8eSrDMP1Tizz/PPnugljG6O/041N2RnJuWMizL1vmkcKxNGLolY+ElVuWsa9RRGkNdeLa11oJBrz8694qXhdNudc2gsuDazoGTdES2h+z/x0+ptY8oaivCr/3ZbzEOoYlKv/8ngjNxcbtKOdhH4g40sHxf2cxA0BBXzXi/Pp9UYvukjf7AqPC7MhQF957Ioigy1rRpFpfHU8fkbWk6zY0fEVNlpl4TW1N5AVsLPalWL2npHwP6leM/ub2us7Oq6YaVGtHlOGnSodAJx6tZro3yI3Wr8CNdP106oyL1w0E+2EWbra5rQategRyw+HVy2LLID1DYuD3Z84wriLoVA78yWb2eiKd4DtNBjk= jenkins@5a81456ad700
+    expose:
+       - 22
+    volumes: 
+       - jenkins-agent-home:/var/jenkins_home
+volumes:
+  jenkins-agent-home:

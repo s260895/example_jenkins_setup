@@ -1,0 +1,12 @@
+version: '3'
+services:
+  jenkins-controller:
+    build: .
+    ports:
+       - 8080:8080
+    expose:
+       - 22
+    volumes:
+       - jenkins-home:/var/jenkins_home
+volumes:
+  jenkins-home:
